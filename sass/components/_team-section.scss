@@ -1,0 +1,120 @@
+.team {
+  background-color: $bg-color-lightest;
+
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+
+.team__container {
+  @extend %container;
+}
+
+.team__heading {
+  @extend %title;
+  display: block;
+  width: 264px;
+  margin-top: 0;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.developers {
+  @extend %list;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
+.developers__item {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 4 * 30px) / 4);
+    margin: 15px;
+  }
+
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: $range;
+    }
+  }
+}
+
+.developers__name {
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-top: 0;
+  padding-top: $range;
+
+  color: $title-text-color;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19px;
+  text-align: center;
+}
+
+.developers__position {
+  margin-top: 0;
+}
+
+/* -----------------------Media-set--------------------------------------- */
+
+.media-set {
+  @extend %list;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding-bottom: 24px;
+
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 30px;
+  }
+}
+
+.media-set__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.media-set__link {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  border-radius: 50%;
+  fill: $networks-icon-color;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+
+  &:hover .media-set__icon {
+    fill: $white-color;
+  }
+  &:focus .media-set__icon {
+    fill: $white-color;
+  }
+}
+
+.media-set__icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
