@@ -191,46 +191,6 @@
 
 .agreement {
   font-style: normal;
-
-  @media screen and (min-width: 320px) {
-    letter-spacing: 0.02em;
-    font-size: 8px;
-    line-height: 1.16;
-  }
-
-  @media screen and (min-width: 480px) {
-    letter-spacing: 0.03em;
-    font-size: 12px;
-    line-height: 1.16;
-  }
-
-  @media screen and (min-width: 1200px) {
-    font-size: 14px;
-    line-height: 1.7;
-  }
-}
-
-.agreement__label {
-  display: flex;
-  align-items: center;
-
-  position: relative;
-  margin-right: auto;
-  margin-left: auto;
-
-  justify-content: space-between;
-
-  @media screen and (min-width: 320px) {
-    width: 240px;
-  }
-
-  @media screen and (min-width: 480px) {
-    width: 370px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    width: 448px;
-  }
 }
 
 .agreement__input {
@@ -240,7 +200,7 @@
   appearance: none;
   position: absolute;
 
-  &:checked ~ .agreement__icon--active {
+  &:checked + .agreement__icon .agreement__icon--active {
     opacity: 1;
   }
 
@@ -250,21 +210,41 @@
   }
 }
 
+.agreement__label {
+  @media screen and (min-width: 320px) {
+    font-size: 12px;
+    line-height: 16px;
+    vertical-align: middle;
+    letter-spacing: 0.02em;
+  }
+
+  @media screen and (min-width: 480px) {
+    letter-spacing: 0.03em;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+  }
+}
+
 .agreement__icon {
   display: inline-block;
   width: 16px;
   height: 15px;
   padding: 0;
+  position: relative;
 
   border: 2px solid #212121;
   border-radius: 2px;
+  margin-right: 8px;
 }
 
 .agreement__icon--active {
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 0;
-  transform: translateY(-50%);
+  width: 100%;
+  height: 100%;
   opacity: 0;
 }
 
@@ -274,23 +254,6 @@
 
   color: $accent-color;
   border-bottom: 1px solid #2196f3;
-
-  @media screen and (min-width: 320px) {
-    font-size: 8px;
-    line-height: 1.16;
-    letter-spacing: 0.02em;
-  }
-
-  @media screen and (min-width: 480px) {
-    letter-spacing: 0.03em;
-    font-size: 12px;
-    line-height: 1.16;
-  }
-
-  @media screen and (min-width: 1200px) {
-    font-size: 14px;
-    line-height: 1.7;
-  }
 }
 
 .modal-button {

@@ -201,20 +201,14 @@
         <ul class="grid list">
           <li class="grid__item">
             <picture>
-              <source
-                srcset="./images/img.jpg 1x, ./images/img-2x.jpg 2x"
-                media="(min-width: 1200px)"
-              />
+              <source srcset="./images/img.jpg 1x, ./images/img-2x.jpg 2x" />
               <img src="./images/img.jpg" alt="Разработка программного обеспечения" />
             </picture>
             <div class="performance"><p class="performance__text">Десктопные приложения</p></div>
           </li>
           <li class="grid__item">
             <picture>
-              <source
-                srcset="./images/img1.jpg 1x, ./images/img1-2x.jpg 2x"
-                media="(min-width: 1200px)"
-              />
+              <source srcset="./images/img1.jpg 1x, ./images/img1-2x.jpg 2x" />
               <img src="./images/img1.jpg" alt="Дизайн интерфейса" />
             </picture>
 
@@ -222,10 +216,7 @@
           </li>
           <li class="grid__item">
             <picture>
-              <source
-                srcset="./images/img2.jpg 1x, ./images/img2-2x.jpg 2x"
-                media="(min-width: 1200px)"
-              />
+              <source srcset="./images/img2.jpg 1x, ./images/img2-2x.jpg 2x" />
               <img src="./images/img2.jpg" alt="Визуальное оформление" />
             </picture>
             <div class="performance"><p class="performance__text">Дизайнерские решения</p></div>
@@ -249,7 +240,7 @@
                 />
                 <source
                   srcset="./images/img3-mob-1x.jpg 1x, ./images/img3-mob-2x.jpg 2x"
-                  media="(min-width: 480px)"
+                  media="(min-width: 0px)"
                 />
                 <img src="./images/img3.jpg" alt="Игорь Демьяненко" />
               </picture>
@@ -300,7 +291,7 @@
                 />
                 <source
                   srcset="./images/img4-mob-1x.jpg 1x, ./images/img4-mob-2x.jpg 2x"
-                  media="(min-width: 480px)"
+                  media="(min-width: 0px)"
                 />
                 <img src="./images/img4.jpg" alt="Ольга Репина" />
               </picture>
@@ -351,7 +342,7 @@
                 />
                 <source
                   srcset="./images/img5-mob-1x.jpg 1x, ./images/img5-mob-2x.jpg 2x"
-                  media="(min-width: 480px)"
+                  media="(min-width: 0px)"
                 />
                 <img src="./images/img5.jpg" alt="Николай Тарасов" />
               </picture>
@@ -402,7 +393,7 @@
                 />
                 <source
                   srcset="./images/img6-mob-1x.jpg 1x, ./images/img6-mob-2x.jpg 2x"
-                  media="(min-width: 480px)"
+                  media="(min-width: 0px)"
                 />
                 <img src="./images/img6.jpg" alt="Михаил Ермаков" />
               </picture>
@@ -632,10 +623,11 @@
           <div class="agreement">
             <label class="agreement__label">
               <input type="checkbox" name="agreement" class="agreement__input input" />
-              <span class="agreement__icon"></span>
-              <svg width="16" height="15" class="agreement__icon--active">
-                <use href="./images/icons.svg#icon-check-full"></use>
-              </svg>
+              <span class="agreement__icon">
+                <svg width="16" height="15" class="agreement__icon--active">
+                  <use href="./images/icons.svg#icon-check-full"></use>
+                </svg>
+              </span>
               Соглашаюсь с рассылкой и принимаю
               <a href="" class="agreement__contract">Условия договора</a>
             </label>
